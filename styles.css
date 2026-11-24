@@ -1180,6 +1180,27 @@ body.nav-open .nav__toggle span:nth-child(2) { transform: translateY(-3px) rotat
   background: linear-gradient(165deg, var(--fill-1), var(--fill-2));
   transition: border-color 0.3s ease, transform 0.35s var(--ease);
 }
+.award--highlight {
+  border-color: rgba(255, 184, 107, 0.45);
+  background:
+    radial-gradient(120% 80% at 100% 0%, rgba(255, 184, 107, 0.18), transparent 60%),
+    linear-gradient(165deg, var(--fill-1), var(--fill-2));
+  box-shadow: 0 0 0 1px rgba(255, 184, 107, 0.12) inset, 0 18px 40px -18px rgba(255, 184, 107, 0.35);
+}
+.award--highlight:hover {
+  border-color: rgba(255, 184, 107, 0.7);
+  box-shadow: 0 0 0 1px rgba(255, 184, 107, 0.2) inset, 0 22px 46px -18px rgba(255, 184, 107, 0.45);
+}
+.award--highlight .award__mark {
+  color: var(--accent-3);
+  text-shadow: 0 0 14px rgba(255, 184, 107, 0.6);
+}
+.award__prize {
+  color: var(--accent-3);
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(255, 184, 107, 0.45);
+}
+
 .award:hover { border-color: rgba(255, 184, 107, 0.3); transform: translateY(-3px); }
 .award__mark {
   display: grid;

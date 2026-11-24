@@ -193,10 +193,10 @@
     function frame(now) {
       const p = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = prefix + Math.round(target * eased) + suffix;
+      el.textContent = prefix + Math.round(target * eased).toLocaleString("en-US") + suffix;
       if (p < 1) requestAnimationFrame(frame);
       else {
-        el.textContent = prefix + target + suffix;
+        el.textContent = prefix + target.toLocaleString("en-US") + suffix;
         el.classList.remove("is-counting");
       }
     }
@@ -215,7 +215,7 @@
     counters.forEach((el) => {
       el.textContent =
         (el.getAttribute("data-prefix") || "") +
-        el.getAttribute("data-count") +
+        Number(el.getAttribute("data-count")).toLocaleString("en-US") +
         (el.getAttribute("data-suffix") || "");
     });
   } else {

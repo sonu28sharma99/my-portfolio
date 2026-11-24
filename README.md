@@ -21,7 +21,7 @@ python3 -m http.server 8000
 | `styles.css` | Theme, layout, responsive rules |
 | `script.js` | Nav, scroll reveals, counters, copy-email |
 | `assets/sonu-sharma.jpg` | Hero portrait — cropped to 4:5, watermark removed, colour graded |
-| `assets/Sonu-Sharma-Resume.pdf` | Résumé (linked from the nav + contact) |
+| Résumé | Hosted on Google Drive (linked from the nav + contact) — https://drive.google.com/file/d/17pmXRP5spcm43bnVnKOOTLDPsQDLHftF/view |
 | `assets/favicon.svg` | Favicon |
 
 ## Dark & light mode
@@ -41,8 +41,8 @@ Hero → About → Experience → Skills & competitive programming → Awards & 
 - **Colors, fonts, spacing** live in the `:root` block at the top of `styles.css`.
 - **Contact details** are in the contact section of `index.html` (email appears twice:
   the `mailto:` link and the `data-email` attribute on the copy button).
-- **Résumé**: replace `assets/Sonu-Sharma-Resume.pdf` and keep the filename, or update
-  the three links that point to it.
+- **Résumé**: hosted on Google Drive — update the three links in `index.html`
+  (nav, header button, contact list) if you replace the file.
 
 ## Deploying
 

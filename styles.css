@@ -1236,6 +1236,11 @@ body.nav-open .nav__toggle span:nth-child(2) { transform: translateY(-3px) rotat
   text-transform: uppercase;
   color: var(--muted-dim);
 }
+.award--highlight .award__tag {
+  color: var(--accent-3);
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(255, 184, 107, 0.4);
+}
 
 .edu {
   display: flex;

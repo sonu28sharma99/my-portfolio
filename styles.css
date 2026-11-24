@@ -663,6 +663,35 @@ body.nav-open .nav__toggle span:nth-child(2) { transform: translateY(-3px) rotat
   font-size: 14px;
 }
 
+.chip__logo {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 14px -6px rgba(0, 125, 195, 0.55);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s ease;
+}
+.chip__logo img {
+  width: 100%;
+  height: auto;
+  max-height: 22px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));
+}
+.chip:hover .chip__logo {
+  transform: scale(1.08) rotate(-3deg);
+  box-shadow: 0 6px 18px -6px rgba(0, 125, 195, 0.7);
+}
+[data-theme="light"] .chip__logo {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 14px -8px rgba(0, 125, 195, 0.4);
+}
+
 .bars {
   display: flex;
   align-items: flex-end;

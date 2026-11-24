@@ -556,6 +556,12 @@ body.nav-open .nav__toggle span:nth-child(2) { transform: translateY(-3px) rotat
   letter-spacing: -0.02em;
   color: var(--text);
   font-variant-numeric: tabular-nums;
+  display: inline-block;
+  transition: transform 0.25s var(--ease), text-shadow 0.25s ease;
+}
+.stat__num.is-counting {
+  transform: scale(1.08);
+  text-shadow: 0 0 18px rgba(139, 123, 255, 0.55);
 }
 .stat__label {
   font-size: 11.5px;

@@ -186,18 +186,30 @@
     const target = parseFloat(el.getAttribute("data-count"));
     const prefix = el.getAttribute("data-prefix") || "";
     const suffix = el.getAttribute("data-suffix") || "";
-    const duration = 1400;
+    const duration = 2000;
     const start = performance.now();
+    el.classList.add("is-counting");
 
     function frame(now) {
       const p = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - p, 3);
       el.textContent = prefix + Math.round(target * eased) + suffix;
       if (p < 1) requestAnimationFrame(frame);
-      else el.textContent = prefix + target + suffix;
+      else {
+        el.textContent = prefix + target + suffix;
+        el.classList.remove("is-counting");
+      }
     }
     requestAnimationFrame(frame);
   }
+
+  // Start from 0 so the count-up is visibly animated (no flash of final value)
+  counters.forEach((el) => {
+    el.textContent =
+      (el.getAttribute("data-prefix") || "") +
+      "0" +
+      (el.getAttribute("data-suffix") || "");
+  });
 
   if (reduceMotion || !("IntersectionObserver" in window)) {
     counters.forEach((el) => {

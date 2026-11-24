@@ -164,6 +164,21 @@
     revealEls.forEach((el) => revealObserver.observe(el));
   }
 
+  /* ---------- Timeline spine draw ---------- */
+  const timelineEl = document.querySelector(".timeline");
+  if (timelineEl) {
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      timelineEl.classList.add("is-visible");
+    } else {
+      const tlObs = new IntersectionObserver(function (entries, o) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { timelineEl.classList.add("is-visible"); o.unobserve(timelineEl); }
+        });
+      }, { threshold: 0.05 });
+      tlObs.observe(timelineEl);
+    }
+  }
+
   /* ---------- Animated counters ---------- */
   const counters = document.querySelectorAll("[data-count]");
 
@@ -266,6 +281,130 @@
         card.style.setProperty("--mx", ((e.clientX - rect.left) / rect.width) * 100 + "%");
         card.style.setProperty("--my", ((e.clientY - rect.top) / rect.height) * 100 + "%");
       });
+    });
+  }
+})();
+
+(function () {
+  "use strict";
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* ---------- Ambient particle field ---------- */
+  const canvas = document.querySelector(".bg-particles");
+  if (canvas && !reduceMotion) {
+    const ctx = canvas.getContext("2d");
+    let w = 0, h = 0, dpr = 1;
+    let particles = [];
+    const COUNT = 42;
+
+    function resize() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = canvas.clientWidth;
+      h = canvas.clientHeight;
+      canvas.width = Math.floor(w * dpr);
+      canvas.height = Math.floor(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function makeParticle() {
+      return {
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 1.6 + 0.4,
+        vx: (Math.random() - 0.5) * 0.18,
+        vy: -Math.random() * 0.22 - 0.05,
+        a: Math.random() * 0.5 + 0.15,
+        hue: Math.random() < 0.6 ? "accent" : "accent2",
+      };
+    }
+
+    function init() {
+      resize();
+      particles = [];
+      for (let i = 0; i < COUNT; i++) particles.push(makeParticle());
+    }
+
+    function isDark() {
+      return document.documentElement.dataset.theme !== "light";
+    }
+
+    let running = true;
+    document.addEventListener("visibilitychange", function () {
+      running = !document.hidden;
+      if (running) tick();
+    });
+
+    function tick() {
+      if (!running) return;
+      ctx.clearRect(0, 0, w, h);
+      const dark = isDark();
+      particles.forEach(function (p) {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.y < -10) { p.y = h + 10; p.x = Math.random() * w; }
+        if (p.x < -10) p.x = w + 10;
+        if (p.x > w + 10) p.x = -10;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = dark
+          ? (p.hue === "accent" ? "rgba(139,123,255," + p.a + ")" : "rgba(78,224,200," + (p.a * 0.8) + ")")
+          : (p.hue === "accent" ? "rgba(107,91,255," + (p.a * 0.7) + ")" : "rgba(12,124,110," + (p.a * 0.6) + ")");
+        ctx.fill();
+      });
+      requestAnimationFrame(tick);
+    }
+
+    init();
+    window.addEventListener("resize", function () { resize(); });
+    tick();
+  }
+})();
+
+(function () {
+  "use strict";
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (!window.matchMedia("(hover: hover)").matches) return;
+
+  /* ---------- 3D tilt on cards ---------- */
+  const tiltTargets = document.querySelectorAll(".job__card, .skill-card, .panel, .award, .edu");
+  tiltTargets.forEach(function (el) {
+    el.addEventListener("mousemove", function (e) {
+      const rect = el.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width - 0.5;
+      const py = (e.clientY - rect.top) / rect.height - 0.5;
+      const rx = (-py * 7).toFixed(2);
+      const ry = (px * 9).toFixed(2);
+      el.style.transform = "perspective(900px) rotateX(" + rx + "deg) rotateY(" + ry + "deg) translateY(-4px)";
+    });
+    el.addEventListener("mouseleave", function () {
+      el.style.transform = "";
+    });
+  });
+
+  /* ---------- Magnetic buttons ---------- */
+  document.querySelectorAll(".btn, .theme-toggle, .nav__links a").forEach(function (btn) {
+    btn.addEventListener("mousemove", function (e) {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = "translate(" + (x * 0.18).toFixed(1) + "px, " + (y * 0.22).toFixed(1) + "px)";
+    });
+    btn.addEventListener("mouseleave", function () {
+      btn.style.transform = "";
+    });
+  });
+
+  /* ---------- Hero portrait parallax ---------- */
+  const portrait = document.querySelector(".portrait");
+  const hero = document.querySelector(".hero");
+  if (portrait && hero) {
+    hero.addEventListener("mousemove", function (e) {
+      const rect = hero.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width - 0.5;
+      const py = (e.clientY - rect.top) / rect.height - 0.5;
+      portrait.style.transform = "translate(" + (px * -12).toFixed(1) + "px, " + (py * -10).toFixed(1) + "px) rotate(" + (px * 2).toFixed(2) + "deg)";
+    });
+    hero.addEventListener("mouseleave", function () {
+      portrait.style.transform = "";
     });
   }
 })();

@@ -134,7 +134,17 @@
     });
   }
 
-  menuLinks.forEach((a) => a.addEventListener("click", closeMenu));
+  menuLinks.forEach((a) => {
+    a.addEventListener("click", function () {
+      // Defer closing for links that open in a new tab so the browser
+      // can process the navigation before the menu panel is hidden.
+      if (a.getAttribute("target") === "_blank") {
+        setTimeout(closeMenu, 0);
+      } else {
+        closeMenu();
+      }
+    });
+  });
 
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") closeMenu();

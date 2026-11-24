@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonu Sharma — Software Development Engineer III</title>
+  <meta name="description" content="Sonu Sharma — Software Development Engineer III at Walmart Global Tech. Backend engineer building scalable systems, AI-powered developer tooling, and cloud infrastructure." />
+  <meta name="theme-color" content="#08090d" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sonu Sharma — Software Development Engineer III" />
+  <meta property="og:description" content="Backend engineer at Walmart Global Tech. Scalable systems, AI tooling, and cloud infrastructure." />
+  <meta property="og:image" content="assets/sonu-sharma.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      var theme;
+      try {
+        theme = localStorage.getItem("theme");
+        if (theme !== "dark" && theme !== "light") {
+          theme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+      } catch (e) {
+        theme = "dark";
+      }
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__glow ambient__glow--one"></div>
+    <div class="ambient__glow ambient__glow--two"></div>
+    <div class="ambient__grid"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#top">
+        <span class="brand__mark" aria-hidden="true">SS</span>
+        <span class="brand__text">Sonu Sharma</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+        <a class="nav__resume" href="assets/Sonu-Sharma-Resume.pdf" download>
+          Download résumé
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+        </a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Toggle color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.1"/>
+            <path d="M12 2.6v2.1M12 19.3v2.1M2.6 12h2.1M19.3 12h2.1M5.4 5.4l1.5 1.5M17.1 17.1l1.5 1.5M18.6 5.4l-1.5 1.5M6.9 17.1l-1.5 1.5"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.6 14.6A8.6 8.6 0 0 1 9.4 3.4a8.6 8.6 0 1 0 11.2 11.2z"/>
+          </svg>
+        </button>
+        <a class="btn btn--ghost btn--sm" href="assets/Sonu-Sharma-Resume.pdf" download>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+          Resume
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow reveal">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="eb-full">Software Development Engineer III · Walmart Global Tech</span>
+            <span class="eb-short">SDE III · Walmart Global Tech</span>
+          </p>
+
+          <h1 class="hero__title reveal" style="--d: 60ms">
+            Building systems<br />that <span class="grad">scale</span>,<br />
+            and tools that<br /><span class="grad-2">save time</span>.
+          </h1>
+
+          <p class="hero__lede reveal" style="--d: 120ms">
+            I'm <strong>Sonu Sharma</strong>, a backend engineer with 4+ years of experience
+            designing distributed systems, cutting cloud costs, and shipping AI-powered
+            developer tooling — currently at Walmart Global Tech.
+          </p>
+
+          <div class="hero__cta reveal" style="--d: 180ms">
+            <a class="btn btn--primary" href="#experience">
+              Explore my work
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--outline" href="#contact">Get in touch</a>
+          </div>
+
+          <ul class="hero__stats reveal" style="--d: 240ms">
+            <li>
+              <span class="stat__num" data-count="4" data-suffix="+">4+</span>
+              <span class="stat__label">Years building</span>
+            </li>
+            <li>
+              <span class="stat__num" data-prefix="$" data-count="475" data-suffix="K">$475K</span>
+              <span class="stat__label">Cloud cost saved / yr</span>
+            </li>
+            <li>
+              <span class="stat__num" data-count="750" data-suffix="+">750+</span>
+              <span class="stat__label">DSA problems solved</span>
+            </li>
+            <li>
+              <span class="stat__num" data-count="4" data-suffix="★">4★</span>
+              <span class="stat__label">CodeChef rated</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal" style="--d: 160ms">
+          <div class="portrait">
+            <div class="portrait__glow" aria-hidden="true"></div>
+            <figure class="portrait__frame">
+              <img src="assets/sonu-sharma.jpg" alt="Sonu Sharma working on his laptop in the office" width="1200" height="1500" fetchpriority="high" />
+              <div class="portrait__shade" aria-hidden="true"></div>
+            </figure>
+
+            <div class="chip chip--top">
+              <span class="chip__icon">⚡</span>
+              <div>
+                <span class="chip__k">Currently</span>
+                <span class="chip__v">SDE III @ Walmart</span>
+              </div>
+            </div>
+
+            <div class="chip chip--bottom">
+              <div class="bars" aria-hidden="true">
+                <span style="--h: 40%"></span><span style="--h: 62%"></span><span style="--h: 48%"></span>
+                <span style="--h: 82%"></span><span style="--h: 68%"></span><span style="--h: 96%"></span>
+              </div>
+              <div>
+                <span class="chip__k">Query latency</span>
+                <span class="chip__v">53% faster</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Java</span><i>◆</i><span>Spring Boot</span><i>◆</i><span>Kafka</span><i>◆</i>
+          <span>Kubernetes</span><i>◆</i><span>AWS</span><i>◆</i><span>LangGraph</span><i>◆</i>
+          <span>React</span><i>◆</i><span>Cassandra</span><i>◆</i><span>Terraform</span><i>◆</i>
+          <span>Solr</span><i>◆</i><span>Prometheus</span><i>◆</i><span>MCP</span><i>◆</i>
+          <span>Java</span><i>◆</i><span>Spring Boot</span><i>◆</i><span>Kafka</span><i>◆</i>
+          <span>Kubernetes</span><i>◆</i><span>AWS</span><i>◆</i><span>LangGraph</span><i>◆</i>
+          <span>React</span><i>◆</i><span>Cassandra</span><i>◆</i><span>Terraform</span><i>◆</i>
+          <span>Solr</span><i>◆</i><span>Prometheus</span><i>◆</i><span>MCP</span><i>◆</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__index">01</span> About</p>
+          <h2 class="section__title">Engineer by craft,<br /><span class="grad">problem-solver</span> by instinct.</h2>
+        </div>
+
+        <div class="about">
+          <div class="about__body reveal">
+            <p>
+              I build backend systems that stay fast under real-world pressure — and the
+              observability, automation, and tooling around them that keeps teams out of firefights.
+              At <strong>Walmart Global Tech</strong>, I work on order services at marketplace scale,
+              where a 53% query improvement or a $475K annual cloud saving is the difference between
+              a good quarter and a great one.
+            </p>
+            <p>
+              Before Walmart, I spent three years at <strong>Samsung R&amp;D</strong> shipping the
+              Smart Suggestion app across 17 languages, and started out at <strong>IDEMIA</strong>
+              writing REST APIs and pushing test coverage from 40% to 90%. I care about clean
+              abstractions, honest metrics, and leaving codebases better than I found them.
+            </p>
+            <p>
+              Outside of work I'm a competitive programmer — 750+ problems solved, 4★ on CodeChef,
+              and a Google Kickstart top-7% finish — and lately, an avid builder of LLM-powered
+              agents with MCP, LangChain and LangGraph.
+            </p>
+
+            <div class="about__meta">
+              <div><span class="meta__k">Based in</span><span class="meta__v">Bangalore, India</span></div>
+              <div><span class="meta__k">Focus</span><span class="meta__v">Backend · Distributed Systems</span></div>
+              <div><span class="meta__k">Open to</span><span class="meta__v">Hard problems &amp; good teams</span></div>
+            </div>
+          </div>
+
+          <aside class="about__side reveal" style="--d: 120ms">
+            <div class="panel">
+              <p class="panel__title">Highlights</p>
+              <ul class="ticks">
+                <li><strong>$475K/yr</strong> cloud spend eliminated</li>
+                <li><strong>53%</strong> faster query performance</li>
+                <li><strong>93%</strong> extraction accuracy (from 40%)</li>
+                <li><strong>17</strong> languages shipped globally</li>
+                <li><strong>2</strong> company-wide awards</li>
+              </ul>
+            </div>
+            <div class="panel panel--quote">
+              <p>“Led on-call, decommissioned legacy systems, and shipped AI tooling that cut manual effort by 40%.”</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__index">02</span> Experience</p>
+          <h2 class="section__title">Where I've <span class="grad">shipped</span>.</h2>
+          <p class="section__lede">Four years, three teams, one habit: measure the impact.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="job reveal">
+            <div class="job__meta">
+              <span class="job__date">2025 — Present</span>
+              <span class="job__place">Bangalore, IN</span>
+            </div>
+            <div class="job__card">
+              <div class="job__top">
+                <div>
+                  <h3 class="job__role">Software Development Engineer III</h3>
+                  <p class="job__company">Walmart Global Tech</p>
+                </div>
+                <span class="badge badge--live"><span class="dot"></span>Current</span>
+              </div>
+              <ul class="job__list">
+                <li>Built <strong>AI-powered tools</strong> that automate on-call monitoring and bug fixes — cutting manual effort by <span class="metric">40%</span> and improving issue detection by <span class="metric">30%</span>.</li>
+                <li>Decommissioned a legacy system and migrated its functionality to the new platform, reducing infrastructure and maintenance costs by <span class="metric">30%</span> with zero disruption to business continuity.</li>
+                <li>Reduced cloud costs by <span class="metric">$475K/year</span> and improved query performance by <span class="metric">53%</span> by designing a multi-market Solr flattening and purging mechanism.</li>
+                <li>Led on-call support and production troubleshooting, strengthening reliability through observability with <strong>Prometheus, Splunk and OpenObserve</strong>.</li>
+              </ul>
+              <ul class="tags">
+                <li>Java</li><li>Spring Boot</li><li>Solr</li><li>Kubernetes</li><li>Azure</li><li>Observability</li><li>GenAI</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job__meta">
+              <span class="job__date">2022 — 2025</span>
+              <span class="job__place">Bangalore, IN</span>
+            </div>
+            <div class="job__card">
+              <div class="job__top">
+                <div>
+                  <h3 class="job__role">Software Engineer</h3>
+                  <p class="job__company">Samsung R&amp;D Institute</p>
+                </div>
+              </div>
+              <ul class="job__list">
+                <li>Migrated the Game plugin's codebase from Java to Kotlin, driving a <span class="metric">30% reduction</span> in lines of code and a leaner, safer architecture.</li>
+                <li>Played a pivotal role in the <strong>Samsung Smart Suggestion app</strong>, extracting boarding passes and coupon details across <span class="metric">17 global languages</span>.</li>
+                <li>Improved coupon-code extraction accuracy from <span class="metric">40% → 93%</span>, earning the <strong>Team Awesome Award</strong>.</li>
+                <li>Ran thorough code reviews, mentoring peers and raising overall code quality across the team.</li>
+              </ul>
+              <ul class="tags">
+                <li>Kotlin</li><li>Java</li><li>Android</li><li>NLP</li><li>Code Review</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job__meta">
+              <span class="job__date">2022</span>
+              <span class="job__place">Noida, IN</span>
+            </div>
+            <div class="job__card">
+              <div class="job__top">
+                <div>
+                  <h3 class="job__role">Software Engineer</h3>
+                  <p class="job__company">IDEMIA Group</p>
+                </div>
+              </div>
+              <ul class="job__list">
+                <li>Designed and implemented <strong>RESTful APIs</strong> for microservices, with a focus on high performance and horizontal scalability.</li>
+                <li>Raised unit test coverage from <span class="metric">40% → 90%</span> across the codebase using <strong>JUnit and Mockito</strong>.</li>
+                <li>Mentored interns in Java, Spring Boot, Git and Linux — turning onboarding into a repeatable playbook.</li>
+              </ul>
+              <ul class="tags">
+                <li>Java</li><li>Spring Boot</li><li>REST</li><li>JUnit</li><li>Mockito</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__index">03</span> Toolkit</p>
+          <h2 class="section__title">The stack I <span class="grad">think in</span>.</h2>
+        </div>
+
+        <div class="skills">
+          <div class="skill-card reveal">
+            <div class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true">{ }</span>
+              <h3>Languages</h3>
+            </div>
+            <ul class="tags tags--lg"><li>Java</li><li>JavaScript</li><li>Python</li><li>C#</li><li>C++</li></ul>
+          </div>
+
+          <div class="skill-card reveal" style="--d: 60ms">
+            <div class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true">⌁</span>
+              <h3>Backend</h3>
+            </div>
+            <ul class="tags tags--lg"><li>Spring Boot</li><li>Microservices</li><li>REST APIs</li><li>JUnit</li><li>Mockito</li></ul>
+          </div>
+
+          <div class="skill-card reveal" style="--d: 120ms">
+            <div class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true">▤</span>
+              <h3>Data &amp; Streaming</h3>
+            </div>
+            <ul class="tags tags--lg"><li>PostgreSQL</li><li>MongoDB</li><li>Cassandra</li><li>Apache Kafka</li><li>Solr</li></ul>
+          </div>
+
+          <div class="skill-card reveal" style="--d: 180ms">
+            <div class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true">☁</span>
+              <h3>Cloud &amp; DevOps</h3>
+            </div>
+            <ul class="tags tags--lg"><li>AWS</li><li>Azure</li><li>Kubernetes</li><li>Docker</li><li>Terraform</li><li>GitLab CI/CD</li><li>Jenkins</li><li>Linux</li></ul>
+          </div>
+
+          <div class="skill-card reveal" style="--d: 240ms">
+            <div class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true">◈</span>
+              <h3>GenAI</h3>
+            </div>
+            <ul class="tags tags--lg"><li>MCP Servers</li><li>LangChain</li><li>LangGraph</li><li>LLMs</li><li>GPT-4 / 5</li><li>Copilot</li><li>Cursor</li></ul>
+          </div>
+
+          <div class="skill-card reveal" style="--d: 300ms">
+            <div class="skill-card__head">
+              <span class="skill-card__icon" aria-hidden="true">⌘</span>
+              <h3>Architecture &amp; Frontend</h3>
+            </div>
+            <ul class="tags tags--lg"><li>OOP</li><li>SOLID</li><li>Design Patterns</li><li>LLD / HLD</li><li>React</li><li>HTML / CSS</li></ul>
+          </div>
+        </div>
+
+        <div class="cp-panel reveal">
+          <div class="cp-panel__intro">
+            <p class="eyebrow"><span class="eyebrow__index">04</span> Competitive Programming</p>
+            <h3>Algorithms are the gym.</h3>
+            <p>750+ problems across platforms, and a habit of competing that keeps fundamentals sharp.</p>
+            <div class="cp-badges">
+              <span class="cp-badge"><b>4★</b> CodeChef · 1921</span>
+              <span class="cp-badge"><b>Top 7%</b> Google Kickstart</span>
+              <span class="cp-badge"><b>#1</b> University CodeChef'21</span>
+            </div>
+          </div>
+          <ul class="cp-list">
+            <li><span>Google Kickstart '21 — Round D</span><b>1303 <em>/ 15K+</em></b></li>
+            <li><span>Google Kickstart '21 — Round C</span><b>2085 <em>/ 15K+</em></b></li>
+            <li><span>April Starter Challenge '21</span><b>243 <em>/ 10K+</em></b></li>
+            <li><span>May Lunch Time Challenge '21</span><b>385 <em>/ 10K+</em></b></li>
+            <li><span>CodeChef University Ranking '21</span><b>1 <em>/ 1800+</em></b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AWARDS ============ -->
+    <section class="section" id="awards">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow"><span class="eyebrow__index">05</span> Recognition</p>
+          <h2 class="section__title">Work that got <span class="grad">noticed</span>.</h2>
+        </div>
+
+        <div class="awards">
+          <article class="award reveal">
+            <span class="award__mark" aria-hidden="true">★</span>
+            <h3>Walmart Bravo Award</h3>
+            <p>For exceptional contributions to the Order Services team, recognised with an INR 20,000 cash award.</p>
+            <span class="award__tag">Walmart Global Tech</span>
+          </article>
+
+          <article class="award reveal" style="--d: 60ms">
+            <span class="award__mark" aria-hidden="true">★</span>
+            <h3>Samsung Excellence Award</h3>
+            <p>For significant contribution to the Samsung Smart Suggestion app and its multilingual extraction engine.</p>
+            <span class="award__tag">Samsung R&amp;D</span>
+          </article>
+
+          <article class="award reveal" style="--d: 120ms">
+            <span class="award__mark" aria-hidden="true">★</span>
+            <h3>Team Awesome Award</h3>
+            <p>For lifting coupon-code extraction accuracy from 40% to 93% in the Smart Suggestion app.</p>
+            <span class="award__tag">Samsung R&amp;D</span>
+          </article>
+
+          <article class="award reveal" style="--d: 180ms">
+            <span class="award__mark" aria-hidden="true">★</span>
+            <h3>SWC Pro — INR 50,000</h3>
+            <p>Cash award for clearing the global Samsung Software Competency test across all R&amp;D centres.</p>
+            <span class="award__tag">Samsung Global</span>
+          </article>
+        </div>
+
+        <div class="edu reveal">
+          <div class="edu__left">
+            <p class="eyebrow"><span class="eyebrow__index">06</span> Education</p>
+            <h3>Galgotias University</h3>
+            <p class="edu__degree">B.Tech, Computer Science &amp; Engineering · 2018 — 2022</p>
+          </div>
+          <div class="edu__right">
+            <span class="edu__cgpa">8.5<em>/10</em></span>
+            <span class="edu__label">CGPA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <div class="contact reveal">
+          <div class="contact__glow" aria-hidden="true"></div>
+          <p class="eyebrow"><span class="eyebrow__index">07</span> Contact</p>
+          <h2 class="contact__title">Let's build something<br /><span class="grad">worth measuring</span>.</h2>
+          <p class="contact__lede">
+            I'm always up for conversations about distributed systems, developer tooling,
+            or a genuinely hard backend problem. The inbox is open.
+          </p>
+
+          <div class="contact__actions">
+            <a class="btn btn--primary btn--lg" href="mailto:sonu28sharma99@gmail.com">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              sonu28sharma99@gmail.com
+            </a>
+            <button class="btn btn--outline btn--lg" id="copyEmail" data-email="sonu28sharma99@gmail.com">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span>Copy email</span>
+            </button>
+          </div>
+
+          <ul class="contact__links">
+            <li><a href="https://www.linkedin.com/in/sonu28sharma99" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8.02h4.56V23H.22V8.02zM8.34 8.02h4.37v2.05h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 7v8.29h-4.56v-7.35c0-1.75-.03-4.01-2.44-4.01-2.45 0-2.82 1.91-2.82 3.88V23H8.34V8.02z"/></svg>
+              LinkedIn
+            </a></li>
+            <li><a href="https://github.com/sonu28sharma99" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+              GitHub
+            </a></li>
+            <li><a href="tel:+918810673621">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +91 88106 73621
+            </a></li>
+            <li><a href="assets/Sonu-Sharma-Resume.pdf" download>
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="m9 15 3 3 3-3"/></svg>
+              Résumé
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> Sonu Sharma. Built with care and too much coffee.</p>
+      <a href="#top" class="footer__top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Email copied</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

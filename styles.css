@@ -1163,6 +1163,7 @@ body.nav-open .nav__toggle span:nth-child(2) { transform: translateY(-3px) rotat
   white-space: nowrap;
 }
 .cp-list em { font-style: normal; color: var(--muted-dim); font-size: 11px; }
+.cp-list em b { font-family: inherit; font-size: inherit; color: inherit; font-weight: 400; }
 
 /* ---------- Awards ---------- */
 
